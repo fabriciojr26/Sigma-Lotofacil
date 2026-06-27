@@ -1,10 +1,11 @@
-SIGMA NEXUS CORE - Cloudflare Hotfix v2.3 corrigido
+SIGMA NEXUS CORE - Cloudflare Hotfix v2.4 corrigido
 
-Correcoes aplicadas sobre o pacote v2.2:
+Correcoes aplicadas sobre o pacote v2.2/v2.3:
 - Seed deterministica corrigida em functions/_core/generator.js.
 - /api/generate agora inclui contest no calculo da seed modular.
 - /api/backtest protegido contra endIndex apontando para o ultimo concurso.
 - /api/ping adicionado tambem em functions/api/ping.js.
+- index.html agora embute CSS e JS principais para evitar tela sem estilo quando o Direct Upload nao serve /assets/* corretamente.
 - _worker.js mantido no formato correto de Direct Upload:
   export default { async fetch(request, env, ctx) { ... } }
 - Assets estaticos continuam sendo servidos por env.ASSETS.fetch(request).

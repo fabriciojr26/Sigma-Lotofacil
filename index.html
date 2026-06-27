@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIGMA NEXUS CORE — Research Build</title>
+  <meta name="description" content="SIGMA NEXUS CORE: sistema estatístico experimental 25→15 com dataset interno, motor back-end, animação elétrica, conferência e backtest." />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="nav">
+      <div class="brand">
+        <div class="brand-mark"><span>Σ</span></div>
+        <div>
+          <strong>SIGMA NEXUS CORE</strong>
+          <small>Research Build • 25→15 • Backend Engine</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#console">Console</a>
+        <a href="#results">Resultados</a>
+        <a href="#checker">Conferência</a>
+        <a href="#backtest">Backtest</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-grid">
+        <div class="hero-copy panel">
+          <div class="overline">Novo produto • nova marca • nova interface</div>
+          <h1>Motor estatístico experimental com animação elétrica, dataset real e conferência automática.</h1>
+          <p>
+            O SIGMA NEXUS CORE usa o histórico até o concurso 3719 como base interna, aceita dataset personalizado,
+            processa o último sorteio no back-end e entrega 20 cenários técnicos para validação e conferência.
+          </p>
+          <div class="hero-actions">
+            <a href="#console" class="btn primary">Ativar console</a>
+            <a href="#backtest" class="btn ghost">Auditar motor</a>
+          </div>
+          <p class="safe-note">Sistema experimental. Não há promessa de acerto, garantia ou recomendação de aposta.</p>
+        </div>
+
+        <div class="nexus-visual panel">
+          <div class="orbital-map" id="orbital-map">
+            <div class="core-pulse">NEXUS</div>
+          </div>
+          <div class="system-status">
+            <div><span></span> dataset interno até 3719</div>
+            <div><span></span> motor no back-end</div>
+            <div><span></span> conferência 11–15</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="console-grid" id="console">
+        <div class="panel console-main">
+          <div class="section-title">
+            <div>
+              <span>01 / Console de geração</span>
+              <h2>Entrada do último sorteio</h2>
+            </div>
+            <div class="badge" id="dataset-badge">Dataset interno</div>
+          </div>
+
+          <div class="input-grid">
+            <label>
+              <span>Concurso N</span>
+              <input id="contest" inputmode="numeric" placeholder="Ex.: 3719" />
+            </label>
+            <label>
+              <span>Seed opcional</span>
+              <input id="seed" placeholder="vazio = automática" />
+            </label>
+            <label class="wide">
+              <span>15 dezenas do último sorteio</span>
+              <textarea id="last-draw" rows="2" placeholder="Ex.: 02 03 04 08 10 11 12 14 15 18 19 21 22 23 25"></textarea>
+            </label>
+          </div>
+
+          <div class="number-pad" id="number-pad"></div>
+
+          <div class="command-row">
+            <button class="btn primary big" id="generate-btn">ATIVAR NEXUS CORE</button>
+            <button class="btn ghost" id="clear-draw-btn">Limpar dezenas</button>
+          </div>
+          <div class="error" id="generate-error"></div>
+        </div>
+
+        <aside class="panel dataset-panel">
+          <div class="section-title mini">
+            <div>
+              <span>02 / Dataset</span>
+              <h2>Base histórica</h2>
+            </div>
+          </div>
+          <div class="dataset-card" id="dataset-info">Carregando status do dataset...</div>
+          <label class="upload-zone">
+            <input type="file" id="dataset-file" accept=".csv,.txt,.json,.xlsx" />
+            <strong>Enviar dataset próprio</strong>
+            <small>CSV/TXT/JSON/XLSX. O sistema valida antes de usar.</small>
+          </label>
+          <div class="dataset-card muted" id="upload-status">Nenhum dataset personalizado carregado.</div>
+        </aside>
+      </section>
+
+      <section class="results-section hidden" id="results">
+        <div class="panel result-hero">
+          <div>
+            <span class="overline">03 / Carteira técnica</span>
+            <h2>20 cenários consolidados</h2>
+            <p id="result-subtitle">—</p>
+          </div>
+          <div class="result-actions">
+            <button class="btn ghost" id="copy-btn">Copiar</button>
+            <button class="btn ghost" id="csv-btn">Exportar CSV</button>
+            <button class="btn ghost" id="pdf-btn">Exportar PDF analítico</button>
+          </div>
+        </div>
+        <div class="metric-wall" id="metric-wall"></div>
+        <div class="wallet-grid" id="wallet-grid"></div>
+        <div class="panel report-panel" id="engine-report"></div>
+      </section>
+
+      <section class="checker-grid" id="checker">
+        <div class="panel">
+          <div class="section-title">
+            <div>
+              <span>04 / Conferência</span>
+              <h2>Conferir resultado real</h2>
+            </div>
+          </div>
+          <label>
+            <span>Resultado sorteado para conferência</span>
+            <textarea id="check-result" rows="2" placeholder="Informe as 15 dezenas sorteadas"></textarea>
+          </label>
+          <button class="btn primary" id="check-btn">Conferir carteira atual</button>
+          <div class="error" id="check-error"></div>
+        </div>
+        <div class="panel" id="check-output">
+          <h2>Aguardando conferência</h2>
+          <p class="muted">Depois de gerar a carteira, informe o resultado real para contar 11, 12, 13, 14 e 15.</p>
+        </div>
+      </section>
+
+      <section class="panel" id="backtest">
+        <div class="section-title">
+          <div>
+            <span>05 / Backtest interno</span>
+            <h2>Auditoria N→N+1 capada para serverless</h2>
+          </div>
+          <button class="btn ghost" id="backtest-btn">Rodar backtest rápido</button>
+        </div>
+        <div id="backtest-output" class="backtest-output muted">Executa até 200 ciclos recentes por padrão para não estourar tempo de Function.</div>
+      </section>
+    </main>
+  </div>
+
+  <div class="lab-overlay hidden" id="lab-overlay">
+    <div class="lab-stage">
+      <div class="electric-field" id="electric-field"></div>
+      <div class="lab-core">
+        <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+        <div class="core-label">Σ</div>
+      </div>
+      <div class="lab-info">
+        <strong>Laboratório elétrico NEXUS em execução</strong>
+        <p id="lab-step">Inicializando...</p>
+        <div class="progress"><div id="progress-bar"></div></div>
+        <div class="lab-log" id="lab-log"></div>
+      </div>
+      <div class="capsule-grid" id="capsule-grid"></div>
+      <small>Representação visual das etapas do motor. Saída experimental para validação técnica.</small>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>

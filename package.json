@@ -1,0 +1,14 @@
+{
+  "name": "sigma-nexus-core-premium-v2-3-corrigido",
+  "version": "2.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev .",
+    "deploy": "wrangler pages deploy ."
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "description": "Pacote oficial do projeto SIGMA NEXUS CORE Premium V2 para Cloudflare Pages + Functions"
+}

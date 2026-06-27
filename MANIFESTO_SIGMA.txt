@@ -1,0 +1,26 @@
+PACOTE OFICIAL — SIGMA NEXUS CORE PREMIUM V2
+
+Este pacote pertence ao projeto SIGMA / Lotofácil / NEXUS CORE.
+Não contém sistema de indução eletromagnética, curso, faculdade ou material de outro projeto.
+
+Conteúdo central:
+- Interface SIGMA NEXUS CORE
+- Dataset interno da Lotofácil até o concurso 3719
+- Motor estatístico no back-end Cloudflare Pages Functions
+- Upload opcional de dataset
+- Geração experimental de 20 cenários
+- Conferência 11/12/13/14/15
+- Backtest N→N+1
+- Exportação analítica CSV/PDF
+
+Arquitetura:
+- index.html
+- assets/styles.css
+- assets/app.js
+- functions/_data/lotofacil3719.js
+- functions/_core/*.js
+- functions/api/*.js
+- docs/*.md
+
+Nome correto do pacote:
+sigma-nexus-core-premium-v2-oficial.zip

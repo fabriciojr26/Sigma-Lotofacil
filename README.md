@@ -1,21 +1,21 @@
-# SIGMA NEXUS CORE â€” Premium V2 Oficial
+# SIGMA NEXUS CORE — Premium V2 Oficial
 
-Pacote oficial do projeto SIGMA, reconstruÃ­do para evitar qualquer confusÃ£o com outros projetos.
+Pacote oficial do projeto SIGMA, reconstruído para evitar qualquer confusão com outros projetos.
 
 ## Identidade
 
-SIGMA NEXUS CORE Ã© um sistema estatÃ­stico experimental 25â†’15 com motor no back-end, dataset interno da LotofÃ¡cil atÃ© o concurso 3719, upload opcional de dataset, geraÃ§Ã£o experimental de 20 cenÃ¡rios, conferÃªncia 11/12/13/14/15 e backtest Nâ†’N+1.
+SIGMA NEXUS CORE é um sistema estatístico experimental 25→15 com motor no back-end, dataset interno da Lotofácil até o concurso 3719, upload opcional de dataset, geração experimental de 20 cenários, conferência 11/12/13/14/15 e backtest N→N+1.
 
-## O que este pacote contÃ©m
+## O que este pacote contém
 
 - Nova interface do SIGMA NEXUS CORE;
-- animaÃ§Ã£o elÃ©trica/magnÃ©tica de laboratÃ³rio;
-- mÃ³dulo de dataset;
-- mÃ³dulo de geraÃ§Ã£o;
-- mÃ³dulo de conferÃªncia;
-- mÃ³dulo de backtest;
+- animação elétrica/magnética de laboratório;
+- módulo de dataset;
+- módulo de geração;
+- módulo de conferência;
+- módulo de backtest;
 - motor modular em Cloudflare Pages Functions;
-- documentaÃ§Ã£o tÃ©cnica.
+- documentação técnica.
 
 ## Estrutura
 
@@ -40,7 +40,7 @@ package.json
 1. Suba esta pasta no Cloudflare Pages.
 2. Build command: vazio.
 3. Output directory: raiz.
-4. Confirme que `functions/` estÃ¡ na raiz.
+4. Confirme que `functions/` está na raiz.
 5. Publique.
 
 ## Endpoints
@@ -54,4 +54,4 @@ package.json
 
 ## Nota
 
-Este pacote Ã© exclusivamente do projeto SIGMA.
+Este pacote é exclusivamente do projeto SIGMA.

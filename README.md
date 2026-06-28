@@ -1,57 +1,61 @@
-# SIGMA NEXUS CORE — Premium V2 Oficial
+# SIGMA LOTOFÁCIL — REPOSITÓRIO-ARQUIVO
 
-Pacote oficial do projeto SIGMA, reconstruído para evitar qualquer confusão com outros projetos.
+Este repositório é o cofre público de arquivamento do projeto **SIGMA / Lotofácil / NEXUS CORE**.
 
-## Identidade
+A função deste repositório não é prometer resultado de jogo. A função é preservar, versionar e permitir substituição controlada dos pacotes oficiais do sistema.
 
-SIGMA NEXUS CORE é um sistema estatístico experimental 25→15 com motor no back-end, dataset interno da Lotofácil até o concurso 3719, upload opcional de dataset, geração experimental de 20 cenários, conferência 11/12/13/14/15 e backtest N→N+1.
+## Estado atual do arquivo
 
-## O que este pacote contém
+Versão arquivada em: **2026-06-28**
 
-- Nova interface do SIGMA NEXUS CORE;
-- animação elétrica/magnética de laboratório;
-- módulo de dataset;
-- módulo de geração;
-- módulo de conferência;
-- módulo de backtest;
-- motor modular em Cloudflare Pages Functions;
-- documentação técnica.
+Pacotes oficiais desta rodada:
 
-## Estrutura
+1. **SIGMA_NEXUS_LAB_CLOUDFLARE_v1_2_1_DIRECT_SAFE_AUDITADO.zip**
+   - Finalidade: pacote do site para Cloudflare Pages Direct Upload.
+   - Tamanho local validado: 71.607 bytes.
+   - Quantidade de arquivos internos: 21.
+   - SHA-256: `933e9ade60a46bdcb5a5ada28df592d19effa7e6fe1a3c2bda86bdef1925b007`
+
+2. **SIGMA_LAB_TRANSFERENCIA_METODOS_v2_1.zip**
+   - Finalidade: pacote completo de transferência metodológica, scripts, relatórios, dados e Cloudflare embutido.
+   - Tamanho local validado: 517.868 bytes.
+   - Quantidade de arquivos internos: 61.
+   - SHA-256: `620f4337b28c3140598de7d57e1f4f626821b00c95e97ba513c74f2dc5ed1fcd`
+
+## Como usar
+
+### Para publicar o site
+
+Use o pacote:
 
 ```text
-index.html
-assets/
-  app.js
-  styles.css
-functions/
-  _core/
-  _data/
-  api/
-docs/
-README.md
-MANIFESTO_SIGMA.txt
-wrangler.toml
-package.json
+SIGMA_NEXUS_LAB_CLOUDFLARE_v1_2_1_DIRECT_SAFE_AUDITADO.zip
 ```
 
-## Como publicar
+Esse pacote é a base de publicação direta no Cloudflare Pages.
 
-1. Suba esta pasta no Cloudflare Pages.
-2. Build command: vazio.
-3. Output directory: raiz.
-4. Confirme que `functions/` está na raiz.
-5. Publique.
+### Para continuar o desenvolvimento dos métodos
 
-## Endpoints
+Use o pacote:
 
-- `/api/ping`
-- `/api/dataset/validate`
-- `/api/generate`
-- `/api/check`
-- `/api/backtest`
-- `/api/analyze`
+```text
+SIGMA_LAB_TRANSFERENCIA_METODOS_v2_1.zip
+```
 
-## Nota
+Esse pacote é a base de continuidade técnica do laboratório SIGMA.
 
-Este pacote é exclusivamente do projeto SIGMA.
+## Política de versionamento
+
+Toda nova versão deve seguir o padrão:
+
+```text
+archives/AAAA-MM-DD/NOME_DO_PACOTE.zip
+archives/AAAA-MM-DD/CHECKSUMS_SHA256.txt
+archives/AAAA-MM-DD/MANIFESTO_ARQUIVO_SIGMA.md
+```
+
+Quando uma versão nova for aprovada, ela deve substituir a versão operacional, mas a versão anterior deve permanecer rastreável pelo histórico Git.
+
+## Aviso técnico
+
+O SIGMA é um laboratório estatístico experimental. Nenhum método aqui deve ser tratado como garantia de acerto. A validação correta deve usar protocolo cego, walk-forward e comparação N→N+1.

@@ -24,3 +24,12 @@ jobs:
 
       - name: Estudo multi-seed K=20 (sem deploy)
         run: python lab/benchmark_k20.py 6000 12
+
+      - name: Construir 20 bilhetes com prova matematica de cobertura 13+
+        run: python lab/cobertura_otima13.py --seed 20261019 --out out/otimo13
+      - name: Exportar 20 jogos e certificado (sem deploy)
+        uses: actions/upload-artifact@v4
+        with:
+          name: LotoFacil-20-jogos-otimos-13plus-demo
+          path: out/otimo13/
+          retention-days: 30

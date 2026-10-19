@@ -33,3 +33,17 @@ jobs:
           name: LotoFacil-20-jogos-otimos-13plus-demo
           path: out/otimo13/
           retention-days: 30
+
+      - name: Empacotar fonte do plugin privado
+        run: |
+          mkdir -p out/plugin
+          cd lotofacil-plugin
+          zip -qr ../out/plugin/loto-facil-lab-0.1.0.zip plugin.json .codex-plugin skills
+          cd ..
+          unzip -l out/plugin/loto-facil-lab-0.1.0.zip
+      - name: Disponibilizar pacote do plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: LotoFacil-plugin-fonte-v0-1
+          path: out/plugin/loto-facil-lab-0.1.0.zip
+          retention-days: 30

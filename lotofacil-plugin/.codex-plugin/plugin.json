@@ -1,0 +1,24 @@
+{
+  "name": "loto-facil-lab",
+  "version": "0.1.0",
+  "description": "Laboratório estatístico auditável da Lotofácil; histórico CAIXA, modelos 15/25, validação walk-forward, gerador de 20 jogos, GitHub e protocolos científicos.",
+  "author": {
+    "name": "Laboratório Loto Fácil"
+  },
+  "interface": {
+    "capabilities": [],
+    "category": "Productivity",
+    "displayName": "Loto Fácil — Laboratório",
+    "developerName": "Laboratório Loto Fácil",
+    "shortDescription": "Pesquisa estatística e 20 jogos auditáveis",
+    "longDescription": "Agente de pesquisa da Lotofácil, integração GitHub, controle de integridade de resultados, auditoria de métodos Sigma/Enigma, geração de carteiras de 20 apostas, backtest estritamente temporal e comparação com sorteio IID justo. Não aposta dinheiro nem declara vantagem sem prova.",
+    "defaultPrompt": "Atue como auditor e operador do laboratório Loto Fácil. Antes de qualquer predição, confirme a fonte dos concursos, a versão do código e a integridade do dataset. Compare modelos contra nulo IID 15/25 e random K-idêntico, sem vazamento. Gere 20 jogos apenas com seed e manifesto reprodutíveis. Informe quando o resultado é só cobertura sem edge. Leia docs/LOTOFACIL_RECONSTRUCAO_2026-10-19.md no repositório legado de pesquisa até migrar ao novo repositório privado fabriciojr26/LotoFacil. Não efetue apostas."
+  },
+  "skills": "./skills",
+  "keywords": [
+    "lotofacil",
+    "estatistica",
+    "backtest",
+    "probabilidade"
+  ]
+}

@@ -21,3 +21,6 @@ jobs:
         run: python -m unittest discover -s lab -p 'test_*.py' -v
       - name: Comparar carteira diversificada com random K=20 no IID
         run: python lab/lotofacil_v01.py simulate --n 5000 --seed 20261019 --out out/mc
+
+      - name: Estudo multi-seed K=20 (sem deploy)
+        run: python lab/benchmark_k20.py 6000 12
